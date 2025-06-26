@@ -1,0 +1,5 @@
+import{S as m}from"./select-jIr6UfF7.js";import"./iframe-DHkDeS4D.js";import"./FormControl-BhF826TK.js";import"./TransitionGroupContext-CbOHklGW.js";import"./utils-iop7lDec.js";import"./useFormControl-DnPIpqAP.js";import"./useId-C77_bDNT.js";import"./Select-6Z79SygO.js";import"./formControlState-Dq1zat_P.js";import"./InputBase-SfLOyeDi.js";import"./index-Cxm1fEVQ.js";import"./index-D4MwsqUW.js";import"./createChainedFunction-BO_9K8Jh.js";import"./createSvgIcon-C2P4Wf-q.js";import"./ButtonBase-ChIxzj4n.js";import"./useIsFocusVisible-BKpNlkVY.js";const{fn:i}=__STORYBOOK_MODULE_TEST__,D={title:"ATOMS/Select",component:m,parameters:{controls:{exclude:["onClick","disabled","color"]}},argTypes:{size:{control:{type:"select"},options:["large","medium","small"]}},args:{onClick:i()}},r={args:{size:"medium"}};var o,t,e;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    size: "medium"
+  }
+}`,...(e=(t=r.parameters)==null?void 0:t.docs)==null?void 0:e.source}}};const E=["Default"];export{r as Default,E as __namedExportsOrder,D as default};
