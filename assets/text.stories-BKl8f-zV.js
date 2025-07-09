@@ -1,0 +1,24 @@
+import{b as t,j as g}from"./iframe-CPQTd9d5.js";import{I as n}from"./input-CHyT9iv_.js";import"./FormControl-DTFU8ly8.js";import"./styled-C2Cu9qfT.js";import"./utils-DoM3o7-Q.js";import"./useFormControl-PyG4Ikag.js";import"./isMuiElement-DLkjVCSc.js";import"./useId-Cbn0X-eY.js";import"./Select-C_RdHVh4.js";import"./formControlState-Dq1zat_P.js";import"./List-CyNYxBQg.js";import"./useSlotProps-BP5MHBFQ.js";import"./isHostComponent-DVu5iVWx.js";import"./TransitionGroupContext-D0Irt0u2.js";import"./index-DNpquR1_.js";import"./index-CpFMawnv.js";import"./createChainedFunction-BO_9K8Jh.js";import"./useControlled-C2KopCyd.js";import"./createSvgIcon-BoBBx9HX.js";import"./InputBase-B4vcM9ZV.js";import"./Typography-BzBpWJM4.js";const F={title:"ATOMS/FormInputs/Input",component:n,parameters:{controls:{include:["appearance","size"]}},argTypes:{appearance:{options:["standard","filled","outlined","distinct"],control:{type:"select"}},size:{control:{type:"select"},options:["medium","small"]}}},e={args:{appearance:"standard",size:"medium",label:"Label"},render:i=>{const[m,c]=t.useState(""),[u,r]=t.useState(!1),[d,a]=t.useState(""),x=h=>{const s=h.target.value;c(s),/^[a-zA-Z\s]*$/.test(s)?(r(!1),a("")):(r(!0),a("Only alphabetic text is allowed"))};return g.jsx(n,{...i,value:m,onChange:x,error:u,helperText:d})}};var o,l,p;e.parameters={...e.parameters,docs:{...(o=e.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  args: {
+    appearance: 'standard',
+    size: "medium",
+    label: 'Label'
+  },
+  render: args => {
+    const [value, setValue] = useState('');
+    const [error, setError] = useState(false);
+    const [helperText, setHelperText] = useState('');
+    const handleChange = (e: ChangeEvent<HTMLInputElement>) => {
+      const val = e.target.value;
+      setValue(val);
+      if (!/^[a-zA-Z\\s]*$/.test(val)) {
+        setError(true);
+        setHelperText('Only alphabetic text is allowed');
+      } else {
+        setError(false);
+        setHelperText('');
+      }
+    };
+    return <Input {...args} value={value} onChange={handleChange} error={error} helperText={helperText} />;
+  }
+}`,...(p=(l=e.parameters)==null?void 0:l.docs)==null?void 0:p.source}}};const R=["Text"];export{e as Text,R as __namedExportsOrder,F as default};
