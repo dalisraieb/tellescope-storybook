@@ -1,7 +1,0 @@
-import{T as t}from"./textarea-CG58L6mC.js";import"./iframe-CPQTd9d5.js";import"./input-CHyT9iv_.js";import"./FormControl-DTFU8ly8.js";import"./styled-C2Cu9qfT.js";import"./utils-DoM3o7-Q.js";import"./useFormControl-PyG4Ikag.js";import"./isMuiElement-DLkjVCSc.js";import"./useId-Cbn0X-eY.js";import"./Select-C_RdHVh4.js";import"./formControlState-Dq1zat_P.js";import"./List-CyNYxBQg.js";import"./useSlotProps-BP5MHBFQ.js";import"./isHostComponent-DVu5iVWx.js";import"./TransitionGroupContext-D0Irt0u2.js";import"./index-DNpquR1_.js";import"./index-CpFMawnv.js";import"./createChainedFunction-BO_9K8Jh.js";import"./useControlled-C2KopCyd.js";import"./createSvgIcon-BoBBx9HX.js";import"./InputBase-B4vcM9ZV.js";import"./Typography-BzBpWJM4.js";const{fn:p}=__STORYBOOK_MODULE_TEST__,M={title:"ATOMS/FormInputs/Textarea",component:t,parameters:{controls:{include:["appearance"]}},argTypes:{appearance:{options:["standard","filled","outlined","patientForm"],control:{type:"select"}}},args:{onClick:p()}},r={args:{appearance:"standard",label:"Label",placeholder:"Placeholder"}};var e,o,a;r.parameters={...r.parameters,docs:{...(e=r.parameters)==null?void 0:e.docs,source:{originalSource:`{
-  args: {
-    appearance: 'standard',
-    label: 'Label',
-    placeholder: 'Placeholder'
-  }
-}`,...(a=(o=r.parameters)==null?void 0:o.docs)==null?void 0:a.source}}};const k=["Placeholder"];export{r as Placeholder,k as __namedExportsOrder,M as default};
