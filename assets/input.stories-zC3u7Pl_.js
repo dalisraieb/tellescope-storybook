@@ -1,7 +1,0 @@
-import{I as a}from"./input-hYFv0K2y.js";import"./iframe-BgjesgQg.js";import"./FormControl-BvCggP1j.js";import"./TransitionGroupContext-CLlTie2B.js";import"./utils-DoM3o7-Q.js";import"./useFormControl-YTI9_HU0.js";import"./isMuiElement-DaA2x2kF.js";import"./useId-DP9OkCxR.js";import"./Select-Dnj5o-UP.js";import"./formControlState-Dq1zat_P.js";import"./List-BmU6gkgd.js";import"./useSlotProps-Cmui656I.js";import"./isHostComponent-DVu5iVWx.js";import"./index-D6IPu2VR.js";import"./index-ZbsjeBzv.js";import"./createChainedFunction-BO_9K8Jh.js";import"./useControlled-LfO21FU7.js";import"./createSvgIcon-iIuMGR86.js";import"./InputBase-D3eESvJZ.js";import"./Typography-652LhfSf.js";const{fn:p}=__STORYBOOK_MODULE_TEST__,D={title:"ATOMS/FormInputs/Input",component:a,parameters:{controls:{exclude:["onClick","value","onChange","label"]}},argTypes:{appearance:{options:["standard","filled","outlined","distinct"],control:{type:"select"}},size:{control:{type:"select"},options:["medium","small"]}},args:{onClick:p()}},t={args:{appearance:"standard",size:"medium",label:"Label"}};var r,e,o;t.parameters={...t.parameters,docs:{...(r=t.parameters)==null?void 0:r.docs,source:{originalSource:`{
-  args: {
-    appearance: 'standard',
-    size: "medium",
-    label: 'Label'
-  }
-}`,...(o=(e=t.parameters)==null?void 0:e.docs)==null?void 0:o.source}}};const E=["Default"];export{t as Default,E as __namedExportsOrder,D as default};
