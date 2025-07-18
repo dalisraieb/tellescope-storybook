@@ -1,0 +1,24 @@
+import{r as S,j as e}from"./iframe-CQw1bh_3.js";import{B as g}from"./Box-1eo89r2K.js";import{T as E,a as u,A as C,C as x}from"./CalendarViewMonthRounded-BbsUA_zI.js";import{T as l}from"./Typography-CETEvHWw.js";import{S as m}from"./Star-BSJN2xAC.js";import"./styled-0urVwbhR.js";import"./ButtonBase-CawyO1_w.js";import"./useTimeout-CUAEDxbs.js";import"./TransitionGroupContext-ucckMPrU.js";import"./useIsFocusVisible-DCSDlLBr.js";import"./useTheme-CONGIyUh.js";import"./ownerWindow-DIR61fab.js";import"./createSvgIcon-CPZXexn_.js";import"./useSlotProps-CC53gLXq.js";import"./resolveComponentProps-BAz9eB7D.js";import"./isHostComponent-DVu5iVWx.js";import"./createSvgIcon-D0mVd8bh.js";import"./createChainedFunction-BO_9K8Jh.js";import"./isMuiElement-c5mTnCJM.js";import"./useId-CBKkpWLc.js";import"./useControlled-DKLpkiav.js";function y(t){return{id:`simple-tab-${t}`,"aria-controls":`simple-tabpanel-${t}`}}function w(t){const{children:i,value:n,index:o,...c}=t;return e.jsx("div",{role:"tabpanel",hidden:n!==o,id:`simple-tabpanel-${o}`,"aria-labelledby":`simple-tab-${o}`,...c,children:n===o&&e.jsx(g,{sx:{p:3},children:i})})}const d=({tabs:t,tabPanels:i,appearance:n,icon:o=!0,value:c,onChange:p})=>{const[b,j]=S.useState(c||0),v=(a,r)=>{j(r),p==null||p(a,r)};return e.jsxs(g,{sx:{width:"100%"},children:[e.jsxs(E,{value:b,onChange:v,"aria-label":"basic tabs example",TabIndicatorProps:{sx:a=>({display:"flex",justifyContent:"center",backgroundColor:"transparent",bottom:0,"& > span":{maxWidth:"calc(100%)",width:"100%",backgroundColor:n==="table"?a.palette.common.black:a.palette.primary.main,borderRadius:"100px 100px 0 0",height:3}}),children:e.jsx("span",{})},sx:{minHeight:"auto","& .MuiTabs-flexContainer":{gap:n==="table"?2:3}},children:[t.map((a,r)=>e.jsx(u,{disableRipple:!0,sx:{padding:0,minHeight:"35px",minWidth:"fit-content","&.Mui-selected":{backgroundColor:n==="table"?"transparent":void 0,color:n==="table"?"common.black":"primary.main"}},color:"default",iconPosition:"start",icon:o?a.icon:void 0,label:e.jsx(l,{variant:"body2",sx:{fontWeight:600},children:a.label}),...y(r)},r)),n==="table"?e.jsx(u,{disableRipple:!0,sx:{padding:0,minHeight:"35px",minWidth:"fit-content",color:"#8C90A1","&.Mui-selected":{backgroundColor:"transparent",color:"common.black"}},color:"default",iconPosition:"start",icon:e.jsx(C,{}),...y(t.length)}):null]}),i.map((a,r)=>e.jsx(w,{value:b,index:r,children:a.content},r))]})};d.__docgenInfo={description:"",methods:[],displayName:"Tabs",props:{appearance:{required:!0,tsType:{name:"union",raw:'"default" | "table"',elements:[{name:"literal",value:'"default"'},{name:"literal",value:'"table"'}]},description:""},tabs:{required:!0,tsType:{name:"Array",elements:[{name:"signature",type:"object",raw:`{\r
+    label: string;\r
+    icon: JSX.Element;\r
+}`,signature:{properties:[{key:"label",value:{name:"string",required:!0}},{key:"icon",value:{name:"JSX.Element",required:!0}}]}}],raw:`{\r
+    label: string;\r
+    icon: JSX.Element;\r
+}[]`},description:""},tabPanels:{required:!0,tsType:{name:"Array",elements:[{name:"signature",type:"object",raw:`{\r
+    content: JSX.Element;\r
+}`,signature:{properties:[{key:"content",value:{name:"JSX.Element",required:!0}}]}}],raw:`{\r
+    content: JSX.Element;\r
+}[]`},description:""},icon:{required:!1,tsType:{name:"boolean"},description:"",defaultValue:{value:"true",computed:!1}},value:{required:!1,tsType:{name:"number"},description:""},onChange:{required:!1,tsType:{name:"signature",type:"function",raw:"(event: React.SyntheticEvent, newValue: number) => void",signature:{arguments:[{type:{name:"ReactSyntheticEvent",raw:"React.SyntheticEvent"},name:"event"},{type:{name:"number"},name:"newValue"}],return:{name:"void"}}},description:""}}};const Q={title:"MOLECULES/Tabs",component:d,parameters:{controls:{include:["appearance","icon"]}},argTypes:{appearance:{control:{type:"select",options:["default","table"]}}}},P=[{label:"Tab",icon:e.jsx(m,{})},{label:"Tab",icon:e.jsx(m,{})},{label:"Tab",icon:e.jsx(m,{})}],k=[{content:e.jsx(l,{variant:"body2",children:"Content for Tab 1"})},{content:e.jsx(l,{variant:"body2",children:"Content for Tab 2"})},{content:e.jsx(l,{variant:"body2",children:"Content for Tab 3"})}],q=[{label:"Tab",icon:e.jsx(x,{})},{label:"Tab",icon:e.jsx(x,{})}],s={args:{tabs:[],tabPanels:[],appearance:"table",icon:!0},render:({appearance:t,icon:i})=>e.jsx(d,{tabs:t==="table"?q:P,tabPanels:k,appearance:t,icon:i})};var f,h,T;s.parameters={...s.parameters,docs:{...(f=s.parameters)==null?void 0:f.docs,source:{originalSource:`{
+  args: {
+    tabs: [],
+    tabPanels: [],
+    appearance: "table",
+    icon: true
+  },
+  render: ({
+    appearance,
+    icon
+  }) => {
+    return <Tabs tabs={appearance === "table" ? tabsTable : tabs} tabPanels={tabPanels} appearance={appearance} icon={icon} />;
+  }
+}`,...(T=(h=s.parameters)==null?void 0:h.docs)==null?void 0:T.source}}};const Y=["Standard"];export{s as Standard,Y as __namedExportsOrder,Q as default};
