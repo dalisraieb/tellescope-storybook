@@ -1,1 +1,0 @@
-import{i as d,k as o,g as i}from"./iframe-CQw1bh_3.js";import{r as v}from"./createSvgIcon-D0mVd8bh.js";var e={},r;function n(){if(r)return e;r=1;var t=d();Object.defineProperty(e,"__esModule",{value:!0}),e.default=void 0;var a=t(v()),u=o();return e.default=(0,a.default)((0,u.jsx)("path",{d:"M19 13h-6v6h-2v-6H5v-2h6V5h2v6h6z"}),"Add"),e}var s=n();const l=i(s);export{l as A};
