@@ -1,0 +1,8 @@
+import{I as e}from"./input-CM_-x6T2.js";import"./iframe-BIRbnDU3.js";import"./FormControl-BJPLsCx9.js";import"./styled-BQzQxZQg.js";import"./utils-DoM3o7-Q.js";import"./useFormControl-BH6yyn_Y.js";import"./isMuiElement-Dhbmfky1.js";import"./TextField-DHc1r9LT.js";import"./useId-C-divviP.js";import"./Select-DHZTV8S8.js";import"./formControlState-Dq1zat_P.js";import"./List-D-5zpCoO.js";import"./useSlotProps-ODbKV4Mg.js";import"./resolveComponentProps-BCcY2dCN.js";import"./isHostComponent-DVu5iVWx.js";import"./useTimeout-Cm4fgxMA.js";import"./Paper-rDORrwMN.js";import"./TransitionGroupContext-BaULKsg4.js";import"./index-DhMiAOT7.js";import"./index-CSL-6jbx.js";import"./Grow-BrjM973w.js";import"./useTheme-CdO6g5nq.js";import"./getReactElementRef-76HF8eBV.js";import"./ownerWindow-DIR61fab.js";import"./Modal-Bs-D53QN.js";import"./createChainedFunction-BO_9K8Jh.js";import"./useControlled-BFmAtxsm.js";import"./createSvgIcon-Dj-KrJjm.js";import"./InputBase-fzMASiwB.js";import"./Typography-Cd3v5_Xb.js";const{fn:i}=__STORYBOOK_MODULE_TEST__,U={title:"ATOMS/FormInputs/Input",component:e,parameters:{controls:{include:["appearance","size"]}},argTypes:{appearance:{options:["standard","filled","outlined","distinct"],control:{type:"select"}},size:{control:{type:"select"},options:["medium","small"]}},args:{onClick:i()}},r={args:{appearance:"standard",size:"medium",error:!0,label:"Label"}};var t,o,p;r.parameters={...r.parameters,docs:{...(t=r.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {
+    appearance: 'standard',
+    size: "medium",
+    error: true,
+    label: 'Label'
+  }
+}`,...(p=(o=r.parameters)==null?void 0:o.docs)==null?void 0:p.source}}};const Y=["Error"];export{r as Error,Y as __namedExportsOrder,U as default};
