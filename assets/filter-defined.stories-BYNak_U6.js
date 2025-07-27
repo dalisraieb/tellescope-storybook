@@ -1,0 +1,13 @@
+import{j as p}from"./iframe-BOEgomFY.js";import{T as m}from"./table-tabs-filters-controls-CLY6EW_Q.js";import"./FilterList-BB3eg-vD.js";import"./Box-CK-R1Q0_.js";import"./styled-BMCVJyWx.js";import"./Stack-Cc11et4g.js";import"./CalendarViewMonthRounded-BJKsnHZr.js";import"./ButtonBase-Bf9JyTdh.js";import"./useTimeout-CDGGrJEl.js";import"./TransitionGroupContext-CDEAkzgg.js";import"./useIsFocusVisible-BN_wfPI7.js";import"./useTheme-Blpu_Sfd.js";import"./ownerWindow-DIR61fab.js";import"./createSvgIcon-y6GUQK9N.js";import"./useSlotProps-v6wrWMpK.js";import"./resolveComponentProps-DtOmBmP4.js";import"./isHostComponent-DVu5iVWx.js";import"./createSvgIcon-LsRAuJTe.js";import"./createChainedFunction-BO_9K8Jh.js";import"./isMuiElement-Bf6F_2WO.js";import"./useId-DfYzE2b8.js";import"./useControlled-C-4bjezr.js";import"./Typography-CgdaMjzI.js";import"./icon-button-8VCGKj0p.js";import"./IconButton-CvSpaKp-.js";import"./SwapVert-BwgJ_U4F.js";import"./Search-eKZwCbhx.js";import"./Tag-B6UNhHpC.js";import"./MenuItem-DNZf9Anj.js";import"./List-gGLNKbcG.js";import"./formControlState-Dq1zat_P.js";import"./useFormControl-B6gfc5sY.js";import"./dividerClasses-qGTNULkz.js";import"./GroupOutlined-D0jhcqgU.js";import"./reset-C-immKE0.js";import"./detail-select-pending-BeJCmFog.js";import"./button-n0liwBoJ.js";import"./Button-sfdADAur.js";import"./input-8YHcm5ti.js";import"./FormControl-D37Fn8y0.js";import"./utils-DoM3o7-Q.js";import"./TextField-DKXv7_ip.js";import"./Select-tTbiwVb4.js";import"./Paper-AT6iWgtF.js";import"./index-DQXJKHYz.js";import"./index-BwK426Sg.js";import"./Grow-Dgl558nA.js";import"./getReactElementRef-BclllGOx.js";import"./Modal-BONlEAG5.js";import"./InputBase-DSuvVq8E.js";import"./Add-TB_9c5FD.js";import"./ListItemText-oxz9E3z3.js";import"./detail-select-default-l5G3JsfX.js";import"./tiny-select-xRRZWEFK.js";import"./select-CZlMwc6a.js";import"./Chip-r-q0salv.js";import"./Delete-CI8CsQVk.js";import"./Badge-CctqCfSM.js";import"./usePreviousProps-DztokaXV.js";import"./ListSubheader-DMGyXe1C.js";const dr={title:"MOLECULES/Table Elements/Table tabs filters and controls",component:m,parameters:{controls:{include:[""]}}},r={args:{tabs:[],tabPanels:[]},render:()=>p.jsx(m,{selectedFilters:[{field:"name",value:"a",filterOption:"contains"}]})};var t,o,i;r.parameters={...r.parameters,docs:{...(t=r.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {
+    tabs: [],
+    tabPanels: []
+  },
+  render: () => {
+    return <TableTabsFiltersControls selectedFilters={[{
+      field: "name",
+      value: "a",
+      filterOption: "contains"
+    }]} />;
+  }
+}`,...(i=(o=r.parameters)==null?void 0:o.docs)==null?void 0:i.source}}};const br=["FilterDefined"];export{r as FilterDefined,br as __namedExportsOrder,dr as default};
