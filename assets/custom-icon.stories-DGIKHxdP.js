@@ -1,0 +1,12 @@
+import{j as t}from"./iframe-C_mvATxf.js";import{I as i}from"./input-BW5SRUMQ.js";import{S as a}from"./Star-DcrWNXMk.js";import"./FormControl-Cxd88cuH.js";import"./styled-D3e7hSdf.js";import"./utils-DoM3o7-Q.js";import"./useFormControl-B5wV8xKu.js";import"./generateUtilityClasses-rR3iYhxQ.js";import"./isMuiElement-BRSh3FLT.js";import"./TextField-CChYsR28.js";import"./useId-CjGAtGk9.js";import"./Select-B9Z0luHz.js";import"./formControlState-Dq1zat_P.js";import"./FormLabel-CcMJvyZX.js";import"./useSlotProps-CJdg0P1D.js";import"./resolveComponentProps-BNjn3TbO.js";import"./isHostComponent-DVu5iVWx.js";import"./useTimeout-Cd2_LOh1.js";import"./Paper-y4L9TjWB.js";import"./Grow-CA2fjeE3.js";import"./useTheme-BlUG05El.js";import"./utils-B6yf_fIX.js";import"./TransitionGroupContext-DgN5kJD-.js";import"./index-BmfL9UO7.js";import"./index-BBQBgD7t.js";import"./getReactElementRef-BioJHGsC.js";import"./ownerWindow-DIR61fab.js";import"./Modal-DXzE80HE.js";import"./createChainedFunction-BO_9K8Jh.js";import"./List-B9PzbMud.js";import"./useControlled-Cyk4WA3W.js";import"./createSvgIcon-Iv4cjDr_.js";import"./InputBase-BojRxlmd.js";import"./Typography-BNoquuOj.js";import"./createSvgIcon-BJfsRVye.js";import"./useIsFocusVisible-yosOA7Ab.js";const N={title:"ATOMS/FormInputs/Input",component:i,parameters:{controls:{include:["appearance","size","CustomIcon"]}},argTypes:{appearance:{options:["standard","filled","outlined","distinct"],control:{type:"select"}},size:{control:{type:"select"},options:["medium","small"]},CustomIcon:{options:["start","end"],control:{type:"select"}}},args:{CustomIcon:"start"}},r={args:{appearance:"standard",size:"medium"},render:({CustomIcon:o,...e})=>t.jsx(i,{appearance:e.appearance,size:e.size,disabled:!1,label:"Label",error:!1,startIcon:o==="start"?t.jsx(a,{}):void 0,endIcon:o==="end"?t.jsx(a,{}):void 0})};var p,n,s;r.parameters={...r.parameters,docs:{...(p=r.parameters)==null?void 0:p.docs,source:{originalSource:`{
+  args: {
+    appearance: "standard",
+    size: "medium"
+  },
+  render: ({
+    CustomIcon,
+    ...args
+  }: StoryProps) => {
+    return <Input appearance={args.appearance} size={args.size} disabled={false} label="Label" error={false} startIcon={CustomIcon === "start" ? <StarIcon /> : undefined} endIcon={CustomIcon === "end" ? <StarIcon /> : undefined} />;
+  }
+}`,...(s=(n=r.parameters)==null?void 0:n.docs)==null?void 0:s.source}}};const Q=["CustomIcon"];export{r as CustomIcon,Q as __namedExportsOrder,N as default};
