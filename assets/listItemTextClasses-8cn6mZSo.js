@@ -1,1 +1,0 @@
-import{g as s}from"./generateUtilityClasses-BkYpawWM.js";import{g as e}from"./styled-DspZaNH0.js";function n(t){return e("MuiListItemIcon",t)}const o=s("MuiListItemIcon",["root","alignItemsFlexStart"]);function l(t){return e("MuiListItemText",t)}const r=s("MuiListItemText",["root","multiline","dense","inset","primary","secondary"]);export{n as a,o as b,l as g,r as l};
