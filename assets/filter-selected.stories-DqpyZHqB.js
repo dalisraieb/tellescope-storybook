@@ -1,0 +1,16 @@
+import{j as m}from"./iframe-CpdnR0i2.js";import{T as p}from"./table-tabs-filters-controls-zmhz6Sq-.js";import"./icon-button-Y5vMW5TR.js";import"./IconButton-a3Nxnak7.js";import"./styled-DujYcmrZ.js";import"./generateUtilityClasses-DDi6EuTn.js";import"./ButtonBase-DfyOkDKJ.js";import"./useTimeout-BgZTaRCc.js";import"./TransitionGroupContext-B3hU1AzR.js";import"./useForkRef-k7JvqZ8G.js";import"./useIsFocusVisible-BvCl6UH0.js";import"./createSvgIcon-C3FiYK1r.js";import"./createSvgIcon-C4MRlNQH.js";import"./createChainedFunction-BO_9K8Jh.js";import"./ownerWindow-BN2rbQ_G.js";import"./ownerDocument-DW-IO8s5.js";import"./isMuiElement-5-QtcHpW.js";import"./useControlled-d9yX6gVw.js";import"./detail-select-default-D8J8BZEA.js";import"./button-Bp8dYhEO.js";import"./Button-DOuccIOk.js";import"./tiny-select-Cu9ohbW1.js";import"./select-y-F9G4j3.js";import"./FormControl-8E0NZ6Fd.js";import"./utils-DoM3o7-Q.js";import"./useFormControl-Bdg8Z9sC.js";import"./InputLabel-CkLjBIwK.js";import"./formControlState-Dq1zat_P.js";import"./FormLabel-BvCR-wSo.js";import"./Select-DbmNEHLt.js";import"./useSlotProps-DcuCg741.js";import"./resolveComponentProps-C7XGfMdE.js";import"./isHostComponent-DVu5iVWx.js";import"./Paper-CL1wgyoG.js";import"./Grow-CSCmvqx_.js";import"./useTheme-dL_JtiI5.js";import"./utils-Be2lOGi8.js";import"./index-CoYqnUvw.js";import"./index-wcffcyWy.js";import"./getReactElementRef-dg5jktwz.js";import"./Modal-DFczexqp.js";import"./List-B7_zldcA.js";import"./InputBase-DoBoD0Ub.js";import"./Stack-Bd6jq2pn.js";import"./Chip-Cxo-wOmO.js";import"./input-D6SmNVo1.js";import"./TextField-grUENmEg.js";import"./Typography-DUyUrCFr.js";import"./Add-ClgTdUVf.js";import"./Delete-D5B99YKw.js";import"./Box-Cc3QCFpm.js";import"./Badge-D_C-h1_3.js";import"./usePreviousProps-gH0S_yWp.js";import"./MenuItem-CY6_J7Gc.js";import"./listItemTextClasses-Cs2njzJp.js";import"./dividerClasses-DwUrptCk.js";import"./ListItemIcon-jMMEYnIU.js";import"./ListItemText-Csnkj9ZO.js";import"./ListSubheader-C5U8P2Rn.js";import"./CalendarViewMonthRounded-C73t5EYs.js";import"./Tag-BB6O47SC.js";import"./GroupOutlined-Ah3vpoTb.js";import"./reset-doMOQHw7.js";import"./detail-select-pending-Bp4J6D8E.js";import"./table-search-DxhHNQG_.js";import"./Search-C7SWhrfG.js";import"./Add-Dp0RfSr-.js";const St={title:"MOLECULES/Table Elements/Table tabs filters and controls",component:p,parameters:{controls:{include:[""]}}},t={args:{tabs:[],tabPanels:[]},render:()=>m.jsx(p,{selectedFilters:[{field:"name",value:"",filterOption:"contains"}],openDetailSelectFilter:{open:!0,index:0}})};var r,o,i;t.parameters={...t.parameters,docs:{...(r=t.parameters)==null?void 0:r.docs,source:{originalSource:`{
+  args: {
+    tabs: [],
+    tabPanels: []
+  },
+  render: () => {
+    return <TableTabsFiltersControls selectedFilters={[{
+      field: "name",
+      value: "",
+      filterOption: "contains"
+    }]} openDetailSelectFilter={{
+      open: true,
+      index: 0
+    }} />;
+  }
+}`,...(i=(o=t.parameters)==null?void 0:o.docs)==null?void 0:i.source}}};const Et=["FilterSelected"];export{t as FilterSelected,Et as __namedExportsOrder,St as default};

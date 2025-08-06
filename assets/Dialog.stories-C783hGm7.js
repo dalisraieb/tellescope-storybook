@@ -1,0 +1,13 @@
+import{D as p}from"./Dialog-C_h4dTCu.js";import{e as c}from"./iframe-CpdnR0i2.js";import{T as d}from"./Typography-DUyUrCFr.js";const{fn:e}=__STORYBOOK_MODULE_TEST__,h={title:"MOLECULES/Dialog",component:p,parameters:{layout:"centered",docs:{description:{component:"A versatile dialog component built with Material UI that supports various configurations including different sizes, actions, and content types."}}},argTypes:{title:{control:"text",description:"The title of the dialog"},size:{control:"select",options:["xs","sm","md"],description:"The size of the dialog"},actions:{control:"select",options:["none","one","two","three"],description:"Number of action buttons",mapping:{none:[],one:[{label:"Confirm",onClick:e(),variant:"contained"}],two:[{label:"Cancel",onClick:e(),variant:"text"},{label:"Confirm",onClick:e(),variant:"contained"}],three:[{label:"Cancel",onClick:e(),variant:"text"},{label:"Save Draft",onClick:e(),variant:"outlined"},{label:"Publish",onClick:e(),variant:"contained"}]}},background:{control:"boolean",description:"Whether to show the background scrim/backdrop"},closeButton:{control:"boolean",description:"Whether to show the close button in the top-right corner"},collapsible:{control:"boolean",description:"Whether the dialog can be collapsed/expanded"}},args:{open:!1,title:"Dialog Title",size:"sm",background:!0,closeButton:!0,collapsible:!1,actions:"two"}},t={args:{children:c.createElement(d,{},"This is a sample dialog description that explains what the dialog is for and provides context to the user."),background:!1,title:"Dialog Title"}},o={args:{collapsible:!0,background:!0,children:c.createElement(d,{},"This dialog starts in collapsed state and can be expanded to show this content.")}};var a,n,r;t.parameters={...t.parameters,docs:{...(a=t.parameters)==null?void 0:a.docs,source:{originalSource:`{
+  args: {
+    children: React.createElement(Typography, {}, 'This is a sample dialog description that explains what the dialog is for and provides context to the user.'),
+    background: false,
+    title: 'Dialog Title'
+  }
+}`,...(r=(n=t.parameters)==null?void 0:n.docs)==null?void 0:r.source}}};var i,s,l;o.parameters={...o.parameters,docs:{...(i=o.parameters)==null?void 0:i.docs,source:{originalSource:`{
+  args: {
+    collapsible: true,
+    background: true,
+    children: React.createElement(Typography, {}, 'This dialog starts in collapsed state and can be expanded to show this content.')
+  }
+}`,...(l=(s=o.parameters)==null?void 0:s.docs)==null?void 0:l.source}}};const g=["Default","Collapsed"],f=Object.freeze(Object.defineProperty({__proto__:null,Collapsed:o,Default:t,__namedExportsOrder:g,default:h},Symbol.toStringTag,{value:"Module"}));export{o as C,f as D,t as a};
