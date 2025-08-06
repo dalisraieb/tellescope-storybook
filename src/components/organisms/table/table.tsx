@@ -7,10 +7,10 @@ import TableCell, { type TableCellProps } from "../../atoms/table-control-elemen
 import CheckBox from "../../atoms/checkbox/checkbox";
 import { useState, type FC } from "react";
 import Select from "../../atoms/select/select";
-import TableFooter from '../../atoms/table-control-elements/table-footer/table-footer';
 import AddIcon from '@mui/icons-material/Add';
 import CalendarMonthIcon from '@mui/icons-material/CalendarMonth';
 import { data } from './data';
+import TableFooterSelect from './table-footer-select';
 
 
 interface TableProps {
@@ -38,6 +38,64 @@ const Table: FC<TableProps> = (props) => {
 export default Table
 
 
+const availableFields = [
+    {
+        label: "Count all",
+        value: "countAll"
+    },
+    {
+        label: "Count values",
+        value: "countValues"
+    },
+    {
+        label: "Count unique values",
+        value: "countUniqueValues"
+    },
+    {
+        label: "Count empty",
+        value: "countEmpty"
+    },
+    {
+        label: "Count not empty",
+        value: "countNotEmpty"
+    },
+    {
+        label: "Earliest date",
+        value: "earliestDate"
+    },
+    {
+        label: "latest date",
+        value: "latestDate"
+    },
+    {
+        label: "Date range",
+        value: "dateRange"
+    },
+    {
+        label: "Sum",
+        value: "sum"
+    },
+    {
+        label: "Average",
+        value: "average"
+    },
+    {
+        label: "Median",
+        value: "median"
+    },
+    {
+        label: "Min",
+        value: "min"
+    },
+    {
+        label: "Max",
+        value: "max"
+    },
+    {
+        label: "Range",
+        value: "range"
+    }
+];
 
 export const TableContent = () => {
     const { hide } = useFilterContext();
@@ -73,10 +131,18 @@ export const TableContent = () => {
                         data.map((row, index) => (
                             <TableCellRow key={index}>
                                 <TableCell width={"20%"} sx={{ minWidth: 200, textTransform: "capitalize" }}>
-                                    <CheckBox size="small" sx={{
-                                        height: "24px",
-                                        width: "24px",
-                                    }} /> {row.name}
+                                    <CheckBox
+                                        size="small"
+                                        color="primary"
+                                        sx={{
+                                            height: "24px",
+                                            width: "24px",
+                                            "&.Mui-checked svg": {
+                                                color: "primary.main",
+                                            }
+                                        }}
+                                    />
+                                    {row.name}
                                 </TableCell>
                                 {
                                     Object.entries(row).map(ele => ele).slice(1).map((ele, idx) => {
@@ -99,13 +165,19 @@ export const TableContent = () => {
                         }}
                     >
                         <TableRow>
-                            <TableFooter>
+                            {/* <TableFooter>
                                 100
-                            </TableFooter>
-                            <TableCell />
-                            <TableCell />
-                            <TableCell />
-                            <TableCell />
+                            </TableFooter> */}
+                            <TableFooterSelect
+                                availableFields={availableFields} content="100" />
+                            <TableFooterSelect
+                                availableFields={availableFields} />
+                            <TableFooterSelect
+                                availableFields={availableFields} />
+                            <TableFooterSelect
+                                availableFields={availableFields} />
+                            <TableFooterSelect
+                                availableFields={availableFields} />
                         </TableRow>
                         <TableRow>
                             <TableCell sx={{
@@ -148,7 +220,19 @@ const TableCellWithSelect = ({ withIcon, data, name }: { withIcon?: boolean, dat
     };
 
     return (
-        <TableCell  {...(withIcon ? props : { sx: { minWidth: 200, paddingRight: "0 !important", "& .MuiSelect-select.MuiSelect-standard.MuiSelect-multiple.MuiInputBase-input": { paddingRight: "16px !important" } } })} width={"20%"} >
+        <TableCell  {
+            ...(
+                withIcon ? props : {
+                    sx: {
+                        minWidth: 200,
+                        paddingRight: "0 !important",
+                        "& .MuiSelect-select.MuiSelect-standard.MuiSelect-multiple.MuiInputBase-input": {
+                            maxWidth: "calc(100% - 16px) !important",
+                        }
+                    }
+                }
+            )
+        } width={"20%"} >
             <SelectMenubasedOnCols name={name} data={data} />
         </TableCell>
     );

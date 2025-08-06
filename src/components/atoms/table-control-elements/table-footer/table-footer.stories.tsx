@@ -11,7 +11,7 @@ const meta = {
     component: TableFooter,
     parameters: {
         controls: {
-            exclude: ["children", "StackProps"]
+            exclude: ["children", "StackProps", "hover"]
         },
     },
     argTypes: {

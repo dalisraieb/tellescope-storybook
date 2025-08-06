@@ -69,8 +69,7 @@ type FilterProps = {
   }[],
   open?: boolean;
   value?: { value: string; filterOption: string } | null;
-  field: string;
-
+  field?: string;
   onSetFilterOption?: (option: string) => void;
   onSetFilterValue?: (value: string) => void;
   onClearFilter?: () => void;
@@ -550,20 +549,6 @@ function AddSortMenu({ open, anchorEl, onClose, onAddSort, usedFields }: {
     }, 150);
   }
 
-  // const inputRef = useRef<HTMLInputElement>(null);
-
-  // useEffect(() => {
-  //   const timeout = setTimeout(() => {
-  //     // console.log(inputRef.current?.focus());
-  //     if (inputRef.current) {
-  //       inputRef.current.autofocus = true;
-  //     }
-  //   }, 100); // wait for visibility/transition
-  //   return () => clearTimeout(timeout);
-  // }, []);
-
-
-
   return (
     <Menu
       open={open}
@@ -582,16 +567,12 @@ function AddSortMenu({ open, anchorEl, onClose, onAddSort, usedFields }: {
         }
       }}
       elevation={1}
-    // disableAutoFocusItem={true}
-
     >
       <MenuList
         sx={addSortStyle}
-      // autoFocusItem={false}
       >
         <ListSubheader disableGutters sx={{ lineHeight: "normal" }}>
           <Input
-            // inputRef={inputRef}
             appearance="distinct"
             placeholder="Search For Property"
             size="small"
@@ -675,6 +656,13 @@ const DetailSelectPending = () => {
   };
 
 
+  // when Provide a Value
+  useEffect(() => {
+    if (valueFilter !== undefined) {
+      setFilter(valueFilter);
+      setSearchTerm(valueFilter?.value || "");
+    }
+  }, [valueFilter]);
 
 
   const [searchTerm, setSearchTerm] = useState<string>(valueFilter?.value || "");
@@ -727,14 +715,6 @@ const DetailSelectPending = () => {
       setAnchorEl(null);
     }
   }, [open]);
-
-
-  // useEffect(() => {
-  //   console.log("Re rendering Value Sort...");
-  //   if (valueFilter !== filter) {
-  //     setFilter(valueFilter || null);
-  //   }
-  // }, [valueFilter, filter, setFilter]);
 
 
   const isEmptyOrNotEmpty = filter?.filterOption === "is empty" || filter?.filterOption === "is not empty";
@@ -885,7 +865,7 @@ const DetailSelectPending = () => {
 }
 
 // Filter row component
-function FilterRow({ field, onSetField, filterField }: {
+function FilterRow({ field, onSetField, filterField = "name" }: {
   field: string;
   onSetField: (field: string) => void;
   filterField?: string
@@ -914,7 +894,7 @@ function FilterRow({ field, onSetField, filterField }: {
       alignItems: "center",
     }}>
       <Typography
-        sx={{ fontSize: "12px", color: "#0000001F", textTransform: "capitalize" }}
+        sx={{ fontSize: "12px", color: "#0000001F", textTransform: "capitalize", whiteSpace: "nowrap", overflow: "hidden", textOverflow: "ellipsis" }}
         component={"span"}
       >
         {filterField}
@@ -922,9 +902,8 @@ function FilterRow({ field, onSetField, filterField }: {
       <TinySelect
         value={localField}
         onChange={handleSetLocalField}
-        onOpen={() => setHoveredIndex(selectedIndex)} // 👈 Highlight selected when menu opens
-
-        FormControlProps={{ sx: { width: "auto" } }}
+        onOpen={() => setHoveredIndex(selectedIndex)}
+        FormControlProps={{ sx: { width: "auto !important" } }}
         MenuProps={{
           anchorOrigin: { vertical: 30 as const, horizontal: 'center' as const },
           // transformOrigin: {
@@ -932,7 +911,6 @@ function FilterRow({ field, onSetField, filterField }: {
           //   horizontal: 'center' as const
           // },
           PaperProps: {
-
             sx: {
               ...DetailSelectFilterMenuStyle.sx,
               border: "1px solid #0000001F",
@@ -947,7 +925,7 @@ function FilterRow({ field, onSetField, filterField }: {
         sx={{
           fontSize: "12px !important",
           textTransform: "capitalize",
-          minWidth: "80px !important",
+          minWidth: "60px !important",
           maxWidth: "130px !important",
           width: "auto !important"
         }}
@@ -1009,7 +987,7 @@ const renderValues = (filter: {
 
   return (
     <>
-      {filter?.field}
+      {filter?.field || "Value"}
       {
         filter?.value ? filter?.filterOption ? ` : ${displayedFilterOption}` : "" : ""
       }

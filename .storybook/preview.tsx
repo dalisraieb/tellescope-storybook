@@ -1,6 +1,6 @@
 import type { Preview } from "@storybook/react";
 import { ThemeProvider, CssBaseline } from "@mui/material";
-import theme from "../src/theme"; // Adjust this path based on your folder structure
+import theme from "../src/theme/merged"; // Adjust this path based on your folder structure
 
 const decorator = [
   (Story: any) => (

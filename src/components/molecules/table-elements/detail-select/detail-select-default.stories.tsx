@@ -95,8 +95,7 @@ export const Default: Story = {
                         appearance="filter"
                         filterOptions={filterOptions}
                         value={props.hasValue ? { value: 'a', filterOption: 'contains' } : null}
-                        field='name'
-
+                        field={props.hasValue ? 'name' : undefined}
                     // OnSetFilterOption, OnSetFilterValue, OnClearFilter handlers can be added here
                     />
                 )}
@@ -104,27 +103,3 @@ export const Default: Story = {
         )
     }
 };
-
-
-
-
-/*
-    Detail Select props needs to refactor to support the following:
-    - appearance: 'sort'
-    - sort: { field: string, order: 'ascending' | 'descending' }[]
-    - setSort: React.Dispatch<React.SetStateAction<{ field: string, order: 'ascending' | 'descending' }[]>>
-    - availableSortFields: { label: string, value: string, icon: JSX.Element }[]
-    - onChangeSort?: (field: string, order: 'ascending' | 'descending') => void
-    - onChangeSortOrder?: (field: string, order: 'ascending' | 'descending') => void
-    - onAddSort?: (field: string) => void
-    - onDeleteSort?: () => void
-    Or
-    - appearance: 'filter'
-    - filter: { value: string, filterOption: string } | null
-    - setFilter: React.Dispatch<React.SetStateAction<{ value: string, filterOption: string } | null>>
-    - filterOptions: { label: string, value: string }[]
-    - defaultOpen?: boolean
-    - onChangeFilter?: (field: string) => void
-
-    => depnding on the appearance
-*/

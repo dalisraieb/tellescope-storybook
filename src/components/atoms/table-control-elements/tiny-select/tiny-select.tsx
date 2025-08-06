@@ -9,7 +9,7 @@ interface TinySelectProps extends Omit<ComponentProps<typeof Select>, "value" | 
 import type { SelectChangeEvent } from "@mui/material/Select";
 import type { ComponentProps } from "react";
 
-const TinySelect = ({ value, onChange, children, MenuProps, sx, ...rest }: TinySelectProps) => {
+const TinySelect = ({ value, onChange, children, MenuProps, sx, FormControlProps, ...rest }: TinySelectProps) => {
     const handleChange = (event: SelectChangeEvent<string | string[]>) => {
         if (onChange) {
             onChange(event.target.value as string);
@@ -79,6 +79,7 @@ const TinySelect = ({ value, onChange, children, MenuProps, sx, ...rest }: TinyS
             MenuProps={{
                 ...mergedMenuProps
             }}
+            FormControlProps={FormControlProps}
 
         >
             {children}

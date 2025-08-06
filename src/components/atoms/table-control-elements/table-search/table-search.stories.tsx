@@ -34,11 +34,8 @@ export const Default: Story = {
         expanded: false
     },
     render: (args) => {
-        const [value, setValue] = useState<string>("")
-        const handleOnChange = (newValue: string) => {
-            setValue(newValue);
-        }
-        const { hasValue, ...rest } = args as StoryProps;
+        const { hasValue, expanded, } = args as StoryProps;
+        const [value, setValue] = useState<string>("");
 
         useEffect(() => {
             if (hasValue) {
@@ -48,8 +45,10 @@ export const Default: Story = {
             }
         }, [hasValue]);
 
+
+
         return (
-            <TableSearch {...rest} value={value} onChange={handleOnChange} />
+            <TableSearch value={value} expanded={expanded} />
         );
     },
 };

@@ -1,6 +1,7 @@
 import { Add } from "@mui/icons-material";
 import { Box, Tabs as MuiTabs, Stack, Tab, Typography } from "@mui/material";
 import { useState, type FC, type JSX, type ReactNode } from "react";
+import { useFilterContextSafe } from "../table-elements/table-tabs-filters-controls/table-tabs-filters-controls";
 
 function a11yProps(index: number) {
     return {
@@ -50,13 +51,15 @@ interface TabsProps {
 const TabBar: FC<TabsProps> = ({ tabs, tabPanels, value, onChange, tableControls, defaultTab }) => {
     const [selectedValue, setSelectedValue] = useState(value || defaultTab || 0);
 
+    const { sortSelected, filterSelected } = useFilterContextSafe();
+
     const handleChange = (event: React.SyntheticEvent, newValue: number) => {
         setSelectedValue(newValue);
         onChange?.(event, newValue);
     };
     return (
         <Box sx={{ width: '100%' }}>
-            <Stack sx={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderBottom: 1, borderColor: 'divider' }}>
+            <Stack sx={{ flexDirection: "row", alignItems: "center", justifyContent: "space-between", borderBottom: sortSelected.length > 0 || filterSelected.length > 0 ? 1 : 0, borderColor: 'divider', pl: 3 }}>
                 <MuiTabs
                     value={selectedValue}
                     onChange={handleChange}

@@ -4,7 +4,6 @@ import { Badge, Box, Stack } from "@mui/material";
 import { IconButton } from "../../../atoms/button/icon-button";
 import FilterListIcon from '@mui/icons-material/FilterList';
 import SwapVertIcon from '@mui/icons-material/SwapVert';
-import SearchIcon from '@mui/icons-material/Search';
 import CalendarViewMonthRoundedIcon from '@mui/icons-material/CalendarViewMonthRounded';
 import PersonOutlineOutlinedIcon from '@mui/icons-material/PersonOutlineOutlined';
 import GroupOutlinedIcon from '@mui/icons-material/GroupOutlined';
@@ -14,6 +13,7 @@ import Reset from "../../../atoms/table-control-elements/reset/reset";
 import DetailSelectPending from "../detail-select/detail-select-pending";
 import DetailSelect from "../detail-select/detail-select-default";
 import MoreVertIcon from '@mui/icons-material/MoreVert';
+import TableSearch from "../../../atoms/table-control-elements/table-search/table-search";
 
 // Context
 type FilterContextType = {
@@ -35,15 +35,26 @@ type FilterContextType = {
     setOpenDetailSelectFilter: React.Dispatch<React.SetStateAction<{ open: boolean; index: number } | undefined>>;
     hide: boolean;
     setHide: React.Dispatch<React.SetStateAction<boolean>>;
+    defaultSelectedFilter?: { field: string; value: string; filterOption: string }[];
+
 };
 
 const FilterContext = createContext<FilterContextType | undefined>(undefined);
 
-// Hook to use context
+// Strict Version
 export const useFilterContext = (): FilterContextType => {
     const ctx = useContext(FilterContext);
     if (!ctx) throw new Error("useFilterContext must be used within FilterContext.Provider");
     return ctx;
+};
+
+// Safe version
+export const useFilterContextSafe = (): Pick<FilterContextType, 'sortSelected' | 'filterSelected'> => {
+    const ctx = useContext(FilterContext);
+    return {
+        sortSelected: ctx?.sortSelected ?? [],
+        filterSelected: ctx?.filterSelected ?? [],
+    };
 };
 
 
@@ -97,7 +108,7 @@ const getTabsTable = (newContent?: {
 
 
 interface TableTabsFiltersControlsProps {
-    selectedFilters?: { field: string; value: string | number | boolean; filterOption: string }[];
+    selectedFilters?: { field: string; value: string; filterOption: string }[];
     selectedSorts?: { field: string; order: 'ascending' | 'descending' }[];
     openSortMenu?: boolean;
     tabs?: { label: string; icon?: React.ReactElement }[];
@@ -116,7 +127,7 @@ const TableTabsFiltersControls: FC<TableTabsFiltersControlsProps> = ({ tabs, tab
     const [sortSelected, setSortSelected] = useState<{ field: string; order: 'ascending' | 'descending' }[]>(selectedSorts || []);
     const [openSortMenu, setOpenSortMenu] = useState<boolean>(openSort || false);
     const [reset, setReset] = useState<boolean>(resetFilter || false);
-    const [hide, setHide] = useState<boolean>(true);
+    const [hide, setHide] = useState<boolean>(filterSelected.length > 0 || sortSelected.length > 0 ? false : true);
     const [openDSSort, setOpenDSSort] = useState<boolean>(oDSS || false);
     const [openDSFilter, setOpenDSFilter] = useState<{ open: boolean; index: number } | undefined>(oDSF || { open: false, index: -1 });
 
@@ -144,6 +155,7 @@ const TableTabsFiltersControls: FC<TableTabsFiltersControlsProps> = ({ tabs, tab
         setOpenDetailSelectFilter: setOpenDSFilter,
         hide,
         setHide,
+        defaultSelectedFilter: selectedFilters || [],
     };
 
     const handleAddSort = (field: string) => {
@@ -155,7 +167,7 @@ const TableTabsFiltersControls: FC<TableTabsFiltersControlsProps> = ({ tabs, tab
     const availableFilterFields = availableSortFields.filter(field => !usedFields.includes(field.value));
 
     useEffect(() => {
-        if (hide && sortSelected.length > 0) {
+        if (hide && (sortSelected.length > 0 || filterSelected.length > 0)) {
             setHide(false);
         }
     }, [sortSelected.length]);
@@ -307,12 +319,8 @@ const TableTabsFiltersControls: FC<TableTabsFiltersControlsProps> = ({ tabs, tab
                         >
                             <MoreVertIcon />
                         </IconButton>
-                        <IconButton
-                            color="default"
-                            size="small"
-                        >
-                            <SearchIcon />
-                        </IconButton>
+
+                        <TableSearch />
                     </>
                 }
             />
@@ -342,13 +350,18 @@ const availableSortFields = [
 ];
 
 const FilterSelected = () => {
-    const { filterSelected, setFilterSelected, sortSelected, setSortSelected, handleAddFilter, reset, setReset, openDetailSelectSort, openDetailSelectFilter, hide, setOpenDetailSelectSort, setOpenDetailSelectFilter } = useFilterContext();
+    const { filterSelected, setFilterSelected, sortSelected, setSortSelected, handleAddFilter, reset, setReset, openDetailSelectSort, openDetailSelectFilter, hide, setOpenDetailSelectSort, setOpenDetailSelectFilter, defaultSelectedFilter } = useFilterContext();
 
     const usedFields = filterSelected.map(filter => filter.field);
     const availableFilterFields = availableSortFields.filter(field => !usedFields.includes(field.value));
 
+    const defaultFilterValue = defaultSelectedFilter?.map(f => ({ value: f.value, filterOption: f.filterOption }))[0]
+
+    console.log(defaultSelectedFilter);
+
+
     return (
-        <Stack sx={{ flexDirection: "row", gap: 1, alignItems: "center", width: "100%", justifyContent: "space-between", flexWrap: "wrap", display: hide ? "none" : "flex" }}>
+        <Stack sx={{ flexDirection: "row", gap: 1, alignItems: "center", width: "100%", justifyContent: "space-between", flexWrap: "wrap", display: hide ? "none" : "flex", pl: 1 }}>
             <Stack sx={{ flexDirection: "row", gap: 1, flexWrap: "wrap" }}>
                 {
                     sortSelected.length > 0 ? (
@@ -391,7 +404,7 @@ const FilterSelected = () => {
                             appearance="filter"
                             filterOptions={filterOptions}
                             field={filter.field}
-                            value={{ value: filter.value.toString(), filterOption: filter.filterOption.toString() }}
+                            value={defaultFilterValue}
                             onSetFilterOption={(value) => {
                                 const newFilter = [...filterSelected];
                                 newFilter[index].filterOption = value;
@@ -426,7 +439,6 @@ const FilterSelected = () => {
                         setFilterSelected([]);
                         if (sortSelected.length > 0) {
                             setSortSelected([]);
-
                         }
                     }} />
                 ) : null

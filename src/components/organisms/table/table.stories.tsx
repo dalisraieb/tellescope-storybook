@@ -6,7 +6,7 @@ const meta = {
     component: Table,
     parameters: {
         controls: {
-            include: ['color'],
+            exclude: ['color', "expanded"],
         }
     },
     argTypes: {
