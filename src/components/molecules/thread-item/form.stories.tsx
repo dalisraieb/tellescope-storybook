@@ -16,7 +16,7 @@ const meta = {
     component: ThreadItem,
     parameters: {
         controls: {
-            include: ['current', 'archived', 'unread', 'pinned'],
+            include: ['current', 'archived', 'unread', 'pinned', 'alert'],
         },
     },
     argTypes: {
@@ -30,6 +30,9 @@ const meta = {
             control: { type: 'boolean' },
         },
         pinned: {
+            control: { type: 'boolean' },
+        },
+        alert: {
             control: { type: 'boolean' },
         },
     },
@@ -50,6 +53,7 @@ export const Form: Story = {
         archived: false,
         unread: false,
         pinned: false,
+        alert: false
     },
 };
 
@@ -65,6 +69,7 @@ export const Email: Story = {
         archived: false,
         unread: false,
         pinned: false,
+        alert: false
     },
 };
 
@@ -78,6 +83,7 @@ export const Event: Story = {
         archived: false,
         unread: false,
         pinned: false,
+        alert: false
     },
 };
 
@@ -93,6 +99,7 @@ export const Chat: Story = {
         archived: false,
         unread: false,
         pinned: false,
+        alert: false
     },
 };
 
@@ -108,6 +115,7 @@ export const Phone: Story = {
         archived: false,
         unread: false,
         pinned: false,
+        alert: false
     },
 };
 
@@ -123,6 +131,7 @@ export const GroupMMS: Story = {
         archived: false,
         unread: false,
         pinned: false,
+        alert: false
     },
 };
 
@@ -138,6 +147,7 @@ export const Note: Story = {
         archived: false,
         unread: false,
         pinned: false,
+        alert: false
     },
 };
 
@@ -153,6 +163,7 @@ export const SMS: Story = {
         archived: false,
         unread: false,
         pinned: false,
+        alert: false
     },
 };
 
@@ -164,5 +175,6 @@ export const TeamChatItem: Story = {
         archived: false,
         unread: false,
         pinned: false,
+        alert: false
     },
 };

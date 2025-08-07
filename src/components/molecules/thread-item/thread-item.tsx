@@ -17,6 +17,7 @@ interface ThreadItemProps {
     current?: boolean;
     pinned?: boolean;
     archived?: boolean;
+    alert?: boolean;
 }
 
 const ThreadItem: FC<ThreadItemProps> = ({
@@ -30,6 +31,7 @@ const ThreadItem: FC<ThreadItemProps> = ({
     current = true,
     archived = false,
     pinned = false,
+    alert = false,
 }) => {
     return (
         <Stack sx={{
@@ -38,9 +40,9 @@ const ThreadItem: FC<ThreadItemProps> = ({
             width: 400,
             px: 2,
             py: 1,
-            borderLeft: current && !unread ? "5px solid rgba(60, 130, 246, 1)" : "none",
-            backgroundColor: unread && !current && !pinned && !archived ? "rgba(239, 246, 255, 1)" : "transparent",
-            borderTop: current || pinned || archived || (!content && !name && !details) ? "none" : unread ? "1px solid rgba(226, 232, 240, 1)" : "1px solid rgba(226, 232, 240, 1)",
+            borderLeft: current && !unread && !alert ? "5px solid rgba(60, 130, 246, 1)" : alert && !unread && !current ? "5px solid #BA1A1A" : "none",
+            backgroundColor: unread && !current && !pinned && !archived && !alert ? "rgba(239, 246, 255, 1)" : "transparent",
+            borderTop: current || pinned || archived || alert || (!content && !name && !details) ? "none" : unread ? "1px solid rgba(226, 232, 240, 1)" : "1px solid rgba(226, 232, 240, 1)",
             "&:hover": {
                 backgroundColor: !unread ? "rgba(249, 250, 251, 1)" : undefined,
             },
@@ -73,7 +75,7 @@ const ThreadItem: FC<ThreadItemProps> = ({
                             flex: 1
                         }}>
                         {
-                            unread && !current && !pinned && !archived && (
+                            unread && !current && !pinned && !archived && !alert && (
                                 <Box
                                     sx={{
                                         width: 8,
