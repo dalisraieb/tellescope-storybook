@@ -1,0 +1,12 @@
+import{r as u,j as e}from"./iframe-C7YkNvSQ.js";import{T as i}from"./tiny-select-CrQ49Uy9.js";import{M as r}from"./MenuItem-BzwDd5tb.js";import"./select-2vUKkyk2.js";import"./FormControl-DmS9Qp8c.js";import"./styled-9bVfkw6q.js";import"./utils-DoM3o7-Q.js";import"./useFormControl-DA987-lg.js";import"./generateUtilityClasses-DEoyZHqF.js";import"./isMuiElement-4jqovnI5.js";import"./InputLabel-BSDcvnkt.js";import"./formControlState-Dq1zat_P.js";import"./FormLabel-Bxcy2z6E.js";import"./Select-DIwpWrco.js";import"./useSlotProps-BU_eKGJ3.js";import"./resolveComponentProps-mwzhxngg.js";import"./isHostComponent-DVu5iVWx.js";import"./useForkRef-C4CjHbyO.js";import"./Paper-BDm6ID2S.js";import"./Grow-vDAeiKMi.js";import"./useTheme-DaYcaQ3H.js";import"./utils-B2tfotqe.js";import"./TransitionGroupContext-CotujMke.js";import"./index-C_5Kxbn_.js";import"./index-BxH1Iaxn.js";import"./useTimeout-BzjaGR02.js";import"./getReactElementRef-BlSFz3Vq.js";import"./ownerDocument-DW-IO8s5.js";import"./ownerWindow-BN2rbQ_G.js";import"./Modal-0dIJzl53.js";import"./createChainedFunction-BO_9K8Jh.js";import"./List-4AeG_tC3.js";import"./useControlled-CDtRUcdo.js";import"./createSvgIcon-CAcL5gG4.js";import"./InputBase-wxT8anmG.js";import"./Stack-BPribNI5.js";import"./Chip-BVuNbYRK.js";import"./ButtonBase-DinbBO9G.js";import"./useIsFocusVisible-BgEYUAtg.js";import"./createSvgIcon-CmLukg3o.js";import"./listItemTextClasses-BVuUz09p.js";import"./dividerClasses-6wmrs3Ei.js";const tt={title:"ATOMS/TableControlElements/TinySelect",component:i,parameters:{controls:{exclude:["small","children","value","onChange"]}}},t={render:()=>{const[p,a]=u.useState(""),l=s=>{a(s)};return e.jsxs(i,{value:p,onChange:l,children:[e.jsx(r,{value:"Value",children:"value"}),e.jsx(r,{value:"Option",children:"option"})]})}};var o,n,m;t.parameters={...t.parameters,docs:{...(o=t.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: () => {
+    const [value, setValue] = useState<string>("");
+    const handleChange = (newValue: string) => {
+      setValue(newValue);
+    };
+    return <TinySelect value={value} onChange={handleChange}>\r
+                <MenuItem value="Value">value</MenuItem>\r
+                <MenuItem value="Option">option</MenuItem>\r
+            </TinySelect>;
+  }
+}`,...(m=(n=t.parameters)==null?void 0:n.docs)==null?void 0:m.source}}};const et=["Default"];export{t as Default,et as __namedExportsOrder,tt as default};

@@ -1,0 +1,5 @@
+import{j as s}from"./iframe-C7YkNvSQ.js";import{M as d}from"./MessageScheduled-Dc7FVIfk.js";import{B as n}from"./Box-okHX6eyU.js";import"./Stack-BPribNI5.js";import"./styled-9bVfkw6q.js";import"./Typography-CIh4BeGT.js";import"./generateUtilityClasses-DEoyZHqF.js";const g={title:"Molecules/Message/MessageItem/MessageScheduled",component:d,parameters:{layout:"padded",docs:{description:{component:"A component that displays scheduled message information with cancel option."}}},argTypes:{scheduledTime:{control:"date",description:"The scheduled time for the message (null if not scheduled)"}},args:{scheduledTime:new Date(Date.now()+1440*60*1e3)},decorators:[r=>s.jsx(n,{sx:{maxWidth:"fit-content"},children:s.jsx(r,{})})]},e={args:{scheduledTime:new Date(Date.now()+1440*60*1e3)}};var t,o,a;e.parameters={...e.parameters,docs:{...(t=e.parameters)==null?void 0:t.docs,source:{originalSource:`{
+  args: {
+    scheduledTime: new Date(Date.now() + 24 * 60 * 60 * 1000) // Tomorrow
+  }
+}`,...(a=(o=e.parameters)==null?void 0:o.docs)==null?void 0:a.source}}};const f=["Default"];export{e as Default,f as __namedExportsOrder,g as default};

@@ -1,1 +1,0 @@
-import{j as t}from"./iframe-CpdnR0i2.js";import{c as e}from"./createSvgIcon-C4MRlNQH.js";const c=e(t.jsx("path",{d:"M20 2H4c-1.1 0-2 .9-2 2v18l4-4h14c1.1 0 2-.9 2-2V4c0-1.1-.9-2-2-2m0 14H6l-2 2V4h16z"}),"ChatBubbleOutline");export{c as C};

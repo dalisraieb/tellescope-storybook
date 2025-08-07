@@ -1,0 +1,14 @@
+import{j as e}from"./iframe-C7YkNvSQ.js";import{P as n,S as l,T as s}from"./Tag-BmgM6M8l.js";import{G as t}from"./GroupOutlined-l4EthbOk.js";import{D as a}from"./detail-select-pending-Bhz5kwdk.js";import"./createSvgIcon-CmLukg3o.js";import"./createSvgIcon-CAcL5gG4.js";import"./styled-9bVfkw6q.js";import"./generateUtilityClasses-DEoyZHqF.js";import"./createChainedFunction-BO_9K8Jh.js";import"./ownerWindow-BN2rbQ_G.js";import"./ownerDocument-DW-IO8s5.js";import"./isMuiElement-4jqovnI5.js";import"./useForkRef-C4CjHbyO.js";import"./useControlled-CDtRUcdo.js";import"./useTimeout-BzjaGR02.js";import"./useIsFocusVisible-BgEYUAtg.js";import"./button-C9AJtPin.js";import"./Button-B8jdMY2Z.js";import"./ButtonBase-DinbBO9G.js";import"./TransitionGroupContext-CotujMke.js";import"./input-cJKOjYWy.js";import"./FormControl-DmS9Qp8c.js";import"./utils-DoM3o7-Q.js";import"./useFormControl-DA987-lg.js";import"./TextField-CKlHBCga.js";import"./Select-DIwpWrco.js";import"./useSlotProps-BU_eKGJ3.js";import"./resolveComponentProps-mwzhxngg.js";import"./isHostComponent-DVu5iVWx.js";import"./Paper-BDm6ID2S.js";import"./Grow-vDAeiKMi.js";import"./useTheme-DaYcaQ3H.js";import"./utils-B2tfotqe.js";import"./index-C_5Kxbn_.js";import"./index-BxH1Iaxn.js";import"./getReactElementRef-BlSFz3Vq.js";import"./Modal-0dIJzl53.js";import"./List-4AeG_tC3.js";import"./formControlState-Dq1zat_P.js";import"./InputBase-wxT8anmG.js";import"./InputLabel-BSDcvnkt.js";import"./FormLabel-Bxcy2z6E.js";import"./Typography-CIh4BeGT.js";import"./Add-Dn-QFNkM.js";import"./Box-okHX6eyU.js";import"./MenuItem-BzwDd5tb.js";import"./listItemTextClasses-BVuUz09p.js";import"./dividerClasses-6wmrs3Ei.js";import"./ListItemIcon-B6EQeCdB.js";import"./ListItemText-CUqI4k6h.js";const ne={title:"MOLECULES/Table Elements/Detail Select",component:a,parameters:{controls:{include:["active"]}},argTypes:{active:{control:{type:"boolean"}}},args:{active:!1}},c=[{label:"Name",value:"name",icon:e.jsx(n,{})},{label:"Care Team",value:"care team",icon:e.jsx(t,{})},{label:"Share Team",value:"share team",icon:e.jsx(t,{})},{label:"Journeys",value:"journeys",icon:e.jsx(l,{})},{label:"Tags",value:"tags",icon:e.jsx(s,{})}],r={render:({active:p})=>e.jsx(a,{open:p,availableFilterFields:c})};var o,i,m;r.parameters={...r.parameters,docs:{...(o=r.parameters)==null?void 0:o.docs,source:{originalSource:`{
+  render: ({
+    active
+  }) => {
+    /*\r
+        - This methods helps developer make the component more interactive.\r
+        * onChangeFilter\r
+    */
+
+    return <DetailSelectPending open={active} availableFilterFields={availableFilterFields}
+    // onChangeFilter={(field) => console.log("Filter changed", { field })}
+    />;
+  }
+}`,...(m=(i=r.parameters)==null?void 0:i.docs)==null?void 0:m.source}}};const le=["Pending"];export{r as Pending,le as __namedExportsOrder,ne as default};

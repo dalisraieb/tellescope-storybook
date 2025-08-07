@@ -1,0 +1,19 @@
+import{j as o}from"./iframe-C7YkNvSQ.js";import{a as s,F as e}from"./table-tabs-filters-controls-BcmH7dDl.js";import{C as i}from"./CalendarViewMonthRounded-ks4xoO8L.js";import{I as r}from"./icon-button-RetZhsBg.js";import{S as l}from"./detail-select-default-9JvLFqpR.js";import{S as c}from"./Search-Cule_Y4S.js";import{T as m}from"./Typography-CIh4BeGT.js";import"./createSvgIcon-CmLukg3o.js";import"./createSvgIcon-CAcL5gG4.js";import"./styled-9bVfkw6q.js";import"./generateUtilityClasses-DEoyZHqF.js";import"./createChainedFunction-BO_9K8Jh.js";import"./ownerWindow-BN2rbQ_G.js";import"./ownerDocument-DW-IO8s5.js";import"./isMuiElement-4jqovnI5.js";import"./useForkRef-C4CjHbyO.js";import"./useControlled-CDtRUcdo.js";import"./useTimeout-BzjaGR02.js";import"./useIsFocusVisible-BgEYUAtg.js";import"./Tag-BmgM6M8l.js";import"./GroupOutlined-l4EthbOk.js";import"./reset-DE8CwccM.js";import"./Stack-BPribNI5.js";import"./Box-okHX6eyU.js";import"./detail-select-pending-Bhz5kwdk.js";import"./button-C9AJtPin.js";import"./Button-B8jdMY2Z.js";import"./ButtonBase-DinbBO9G.js";import"./TransitionGroupContext-CotujMke.js";import"./input-cJKOjYWy.js";import"./FormControl-DmS9Qp8c.js";import"./utils-DoM3o7-Q.js";import"./useFormControl-DA987-lg.js";import"./TextField-CKlHBCga.js";import"./Select-DIwpWrco.js";import"./useSlotProps-BU_eKGJ3.js";import"./resolveComponentProps-mwzhxngg.js";import"./isHostComponent-DVu5iVWx.js";import"./Paper-BDm6ID2S.js";import"./Grow-vDAeiKMi.js";import"./useTheme-DaYcaQ3H.js";import"./utils-B2tfotqe.js";import"./index-C_5Kxbn_.js";import"./index-BxH1Iaxn.js";import"./getReactElementRef-BlSFz3Vq.js";import"./Modal-0dIJzl53.js";import"./List-4AeG_tC3.js";import"./formControlState-Dq1zat_P.js";import"./InputBase-wxT8anmG.js";import"./InputLabel-BSDcvnkt.js";import"./FormLabel-Bxcy2z6E.js";import"./Add-Dn-QFNkM.js";import"./MenuItem-BzwDd5tb.js";import"./listItemTextClasses-BVuUz09p.js";import"./dividerClasses-6wmrs3Ei.js";import"./ListItemIcon-B6EQeCdB.js";import"./ListItemText-CUqI4k6h.js";import"./table-search-CGoSzB8E.js";import"./Badge-DnkfCYw-.js";import"./usePreviousProps-DXzHCaM4.js";import"./Add-oL2EMF6j.js";import"./IconButton-ydU9r2DX.js";import"./tiny-select-CrQ49Uy9.js";import"./select-2vUKkyk2.js";import"./Chip-BVuNbYRK.js";import"./Delete-BAIGV3ty.js";import"./ListSubheader-BShIKKvr.js";const Eo={title:"MOLECULES/Tabs",component:s,parameters:{controls:{include:[""]}}},b=[{content:o.jsx(m,{variant:"body2",sx:{p:2},children:"Content for Tab 1"})},{content:o.jsx(m,{variant:"body2",sx:{p:2},children:"Content for Tab 2"})}],d=[{label:"All Contacts",icon:o.jsx(i,{})},{label:"Patients",icon:o.jsx(i,{})}],t={args:{tabs:[],tabPanels:[]},render:()=>o.jsx(s,{tabs:d,tabPanels:b,tableControls:o.jsxs(o.Fragment,{children:[o.jsx(r,{color:"default",size:"small",children:o.jsx(e,{})}),o.jsx(r,{color:"default",size:"small",children:o.jsx(l,{})}),o.jsx(r,{color:"default",size:"small",children:o.jsx(c,{})})]})})};var n,p,a;t.parameters={...t.parameters,docs:{...(n=t.parameters)==null?void 0:n.docs,source:{originalSource:`{
+  args: {
+    tabs: [],
+    tabPanels: []
+  },
+  render: () => {
+    return <TabBar tabs={tabsTable} tabPanels={tabPanels} tableControls={<>\r
+                        <IconButton color="default" size="small">\r
+                            <FilterListIcon />\r
+                        </IconButton>\r
+                        <IconButton color="default" size="small">\r
+                            <SwapVertIcon />\r
+                        </IconButton>\r
+                        <IconButton color="default" size="small">\r
+                            <SearchIcon />\r
+                        </IconButton>\r
+                    </>} />;
+  }
+}`,...(a=(p=t.parameters)==null?void 0:p.docs)==null?void 0:a.source}}};const Fo=["Topbar"];export{t as Topbar,Fo as __namedExportsOrder,Eo as default};

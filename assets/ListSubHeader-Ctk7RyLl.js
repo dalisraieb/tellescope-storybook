@@ -1,0 +1,1 @@
+import{j as o}from"./iframe-C7YkNvSQ.js";import{L as r}from"./ListSubheader-BShIKKvr.js";const t=({sx:s,...e})=>o.jsx(r,{sx:{...s},...e});t.__docgenInfo={description:"",methods:[],displayName:"ListSubheader",composes:["ListSubheaderProps"]};export{t as L};
